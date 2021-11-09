@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
+    // 유효하지 않은 코드를 확인할 때, 가능한 엄격하게 검사
     "strict": true,
+    // tsc가 코드를 컴파일할 대상 모듈 시스템
     "module": "commonjs",
-    "moduleResolution": "node",
+    // tsc가 코드 실행환경에서 이용할 수 있다고 가정하는 API
     "lib": [
-      "es2015",
-      "es2016",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020"
+      "es2015"
     ],
+    "sourceMap":true,
+    // tsc가 코드를 컴파일할 자바스크립트 버전ㄴ
     "target": "ES5",
-    "outDir": "./dist",
-    "esModuleInterop": true
+    // 생성된 자바스크립트 코드를 출력할 디렉토리
+    "outDir": "dist",
   },
-  "exclude": [
-    "node_modules"
-  ],
+  // tsc가 파일을 찾을 디렉토리
   "include": [
-    "src/**/*"
+    "src"
   ]
 }
