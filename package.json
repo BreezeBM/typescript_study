@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "tsc" : "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,11 +17,10 @@
     "url": "https://github.com/BreezeBM/typescript_study/issues"
   },
   "homepage": "https://github.com/BreezeBM/typescript_study#readme",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "@types/node": "^16.11.1",
-    "ts-node": "^10.3.0",
-    "tslint": "^6.1.3",
-    "typescript": "^4.4.4"
+    "ts-node": "^10.3.0"
   }
 }
