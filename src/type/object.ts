@@ -69,4 +69,3 @@ object = {};
 object = [];
 object = {a: 1};
 object = 2;
-
