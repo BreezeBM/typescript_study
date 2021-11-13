@@ -36,7 +36,7 @@ abstract class Piece {
     abstract canMoveTo(position: Position) : boolean;
 };
 // 체스 말 좌표
-class Position {
+ class Position {
     constructor (
         private file: File,
         private rank: Rank
