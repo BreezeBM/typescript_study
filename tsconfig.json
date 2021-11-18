@@ -13,9 +13,10 @@
     "target": "es2020",
     // 생성된 자바스크립트 코드를 출력할 디렉토리
     "outDir": "dist",
+    "noImplicitReturns": true
   },
   // tsc가 파일을 찾을 디렉토리
   "include": [
     "src"
-  ]
+  ],
 }
