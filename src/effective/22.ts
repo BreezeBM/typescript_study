@@ -56,3 +56,32 @@ function foo(x?: number | string | null) {
     }
 }
 // 빈문자열과 0 모두 false가 된다. 타입이 전혀 좁혀지지 않음
+
+// 명시적인 태그를 붙이는 방법
+interface UploadEvent { type: 'upload'; filename: string; contents: string; }
+interface DownloadEvent { type: 'download'; filename: string; }
+type AppEvent = UploadEvent | DownloadEvent;
+function handleEvent(e: AppEvent) {
+    switch(e.type) {
+        case 'download'
+            e // 타입이 DownloadEvent
+            break;
+        case 'upload'
+            e // 타입이 UploadEvent
+            break;
+    }
+}
+
+// 사용자 정의 타입 가드
+function isInputElement(el: HTMLElement): el is HTMLInputElement {
+    return 'value' in el;
+}
+
+function getElementContent(el: HTMLElement) {
+    if(isInputElement(el)) {
+        el; // HTMLInputElement
+        return el.value
+    }
+    el;
+    return el.textContent
+}
